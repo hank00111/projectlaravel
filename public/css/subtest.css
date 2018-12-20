@@ -1,3 +1,4 @@
+
 /*---------アニメ---------*/
 @keyframes flushHorizontal { 0% {
     left:0;
@@ -16,6 +17,7 @@
     right:0;
     }
     }
+  
     
 .navbar {
     position: relative;
@@ -39,7 +41,13 @@
     margin-right: 1rem;
     font-size: 23px;
     line-height: inherit;
-    white-space: nowrap    
+    white-space: nowrap;
+    text-decoration: none;    
+}
+
+.navbar-brandtest:hover,.navbar-brandtest:focus{
+    color: rgba(0,0,0,0.8);
+    text-decoration: none;
 }
 
 .flush {
@@ -66,3 +74,29 @@
 	transition: opacity 0s linear;
 	transition-delay: 0.3s;
 }
+/*
+.cnflush {
+	position: relative;
+	display: table;
+	font-style: normal;
+}
+.cnflush a {
+	opacity: 0;
+	transition: opacity 10s linear;
+	display: block;
+}
+.cnflush:after {
+	content: '';
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	background-color: #fff;
+}
+.cnflush.cnflushRun:after { animation: flushHorizontal 1s cubic-bezier(0.02, 0.88, 0.58, 1); }
+
+.cnflush.cnflushRun a {
+	opacity: 1;
+	transition: opacity 0s linear;
+	transition-delay: 0.3s;
+}
+*/
