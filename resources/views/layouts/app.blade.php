@@ -18,11 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/comm.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/subtest.css') }}" rel="stylesheet">
 
 </head>
 <body>
     <div id="app">
-        @include('layouts.nav')
+        @include('layouts.navtest')
 
         <main>
 

@@ -212,7 +212,7 @@ h2 img { display: block; }
 }
 .flush span {
 	opacity: 0;
-	transition: opacity 10s linear;
+	transition: opacity 0.5s linear;
 	display: block;
 }
 .flush:after {
@@ -222,13 +222,13 @@ h2 img { display: block; }
 	position: absolute;
 	background-color: #000;
 }
-.flush.flushRun:after { animation: flushHorizontal 20s cubic-bezier(1, 0.88, 0.58, 1); }
+.flush.flushRun:after { animation: flushHorizontal 0.6s cubic-bezier(0.02, 0.88, 0.58, 1); }
 ul .flush.flushRun.d2:after { animation-delay: 0.2s; }
 ul .flush.flushRun.d3:after { animation-delay: 0.4s; }
 .flush.flushRun span {
 	opacity: 1;
-	transition: opacity 10s linear;
-	transition-delay: 10s;
+	transition: opacity 0s linear;
+	transition-delay: 0.3s;
 }
 ul .flush.flushRun.d2 span { transition-delay: 0.5s; }
 ul .flush.flushRun.d3 span { transition-delay: 0.7s; }
