@@ -15,8 +15,15 @@
                         </div>
                     @endif
                     
-
-                    You are logged in!
+                    @foreach ($test as $te)
+                        <table border="1">
+                            <tr>
+                                <th>{{ $te->year }}</th>
+                                <th>{{ $te->model }}</th>
+                            </tr>
+                        </table>   
+                    @endforeach
+                        
                 </div>
             </div>
         </div>

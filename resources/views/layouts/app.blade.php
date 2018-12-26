@@ -12,18 +12,33 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'UA-114914740-1');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="../js/jquery.easing.js"></script> 
+    <script src="../js/jquery.sub.js"></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     <!-- Styles -->
     <link href="{{ asset('css/comm.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/subtest.css') }}" rel="stylesheet">
 
 </head>
 <body>
+    <!--@include('layouts.menu')-->
     <div id="app">
+        
         @include('layouts.navtest')
+        
 
         <main>
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Main;
+use App\User;
 
 class BaikuController extends Controller
 {
@@ -14,6 +16,8 @@ class BaikuController extends Controller
     public function index()
     {
         //
+        $test = main::all();
+        return view('home1',compact('test'));
     }
 
     /**
