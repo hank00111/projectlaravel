@@ -30,7 +30,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/comm.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/media.css') }}" rel="stylesheet">
     <link href="{{ asset('css/subtest.css') }}" rel="stylesheet">
+    
 
 </head>
 <body>
