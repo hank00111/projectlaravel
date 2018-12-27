@@ -28,6 +28,7 @@ class BaikuController extends Controller
     public function create()
     {
         //
+        return view('baiku/create');
     }
 
     /**

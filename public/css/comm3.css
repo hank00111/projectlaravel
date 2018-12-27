@@ -6,7 +6,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: sans-serif, Microsoft JhengHei;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -47,6 +47,7 @@ body {
 }
 
 hr {
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     height: 0;
     overflow: visible
@@ -1087,8 +1088,10 @@ pre code {
     }
 
     .col-md-8 {
-        flex: 0 0 66.6666666667%;
-        max-width: 66.6666666667%
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66666667%;
+        flex: 0 0 66.66666667%;
+        max-width: 66.66666667%
     }
 
     .col-md-9 {
@@ -4082,7 +4085,7 @@ input[type=submit].btn-block {
     padding-top: .32rem;
     padding-bottom: .32rem;
     margin-right: 1rem;
-    font-size: 1.125rem;
+    font-size: 23px;
     line-height: inherit;
     white-space: nowrap
 }
@@ -4270,7 +4273,10 @@ input[type=submit].btn-block {
     }
 
     .navbar-expand-lg .navbar-collapse {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
+        -ms-flex-preferred-size: auto;
         flex-basis: auto
     }
 
@@ -4290,11 +4296,15 @@ input[type=submit].btn-block {
 
 @media (min-width:1200px) {
     .navbar-expand-xl {
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start
     }
 
     .navbar-expand-xl .navbar-nav {
+        -ms-flex-direction: row;
         flex-direction: row
     }
 
@@ -4309,11 +4319,15 @@ input[type=submit].btn-block {
 
     .navbar-expand-xl>.container,
     .navbar-expand-xl>.container-fluid {
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap
     }
 
     .navbar-expand-xl .navbar-collapse {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
+        -ms-flex-preferred-size: auto;
         flex-basis: auto
     }
 
@@ -4323,7 +4337,12 @@ input[type=submit].btn-block {
 }
 
 .navbar-expand {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start
 }
 
@@ -4334,6 +4353,9 @@ input[type=submit].btn-block {
 }
 
 .navbar-expand .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row
 }
 
@@ -4348,11 +4370,15 @@ input[type=submit].btn-block {
 
 .navbar-expand>.container,
 .navbar-expand>.container-fluid {
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap
 }
 
 .navbar-expand .navbar-collapse {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
+    -ms-flex-preferred-size: auto;
     flex-basis: auto
 }
 
@@ -4363,16 +4389,19 @@ input[type=submit].btn-block {
 .navbar-light .navbar-brand,
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
-    color: rgba(0, 0, 0, .9)
+    color: rgba(255, 255, 255);
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, .5)
+    font-family: "微軟正黑體";
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1.00);
+    text-align: center;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, .7)
+    color: rgba(0, 0, 0, 0.3)
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -4383,12 +4412,13 @@ input[type=submit].btn-block {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: rgba(0, 0, 0, .9)
+    color: rgba(0, 0, 0, .4)
 }
 
 .navbar-light .navbar-toggler {
-    color: rgba(0, 0, 0, .5);
-    border-color: rgba(0, 0, 0, .1)
+    color: #fff;
+    /*border-color: rgba(0,0,0,.1);*/
+    border-color: #fff;
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -4451,8 +4481,14 @@ input[type=submit].btn-block {
 }
 
 .card {
+    margin-top: 20px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
@@ -4960,7 +4996,7 @@ input[type=submit].btn-block {
 .jumbotron {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    background-color: #e9ecef;
+    background-color: rgba(30, 34, 37, 0.9);
     border-radius: .3rem
 }
 
@@ -9430,6 +9466,28 @@ a.text-dark:hover {
 }
 
 .navbar-laravel {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .04)
+    background-color:  rgba(30, 34, 37, 0.9);
+    border-bottom: 1px solid rgba(101,103,101,0.8);
+    /*-webkit-box-shadow: 0 2px 4px rgba(0,0,0,.04);*/
+    /*box-shadow: 0 2px 4px rgba(0,0,0,.04)*/
+}
+
+/*-----------------------------------------------*/
+
+.main_1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*position: relative;*/
+    background-color: rgba(101,103,101,0.3);
+    height: 980px;
+    
+    
+}
+
+/*---------------------old-----------------------*/
+
+/*---main---*/
+
+#main-base{
+    background: #434343;
 }

@@ -9,10 +9,12 @@
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
+                        <a href="{{ route('baiku.create') }}">test</a>
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
+                        
                     @endif
                     
                     @foreach ($test as $te)

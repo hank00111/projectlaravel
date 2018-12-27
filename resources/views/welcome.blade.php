@@ -71,8 +71,10 @@
                 <div class="top-right links flush flushRun">
                     @auth
                         <a  href="{{ url('/home') }}">首頁</a>
+                        <a href="{{ route('baiku.index') }}">機車</a> 
                     @else
                         <a  href="{{ route('login') }}">登入</a>
+                        <a href="{{ route('baiku.index') }}">機車</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">註冊</a>

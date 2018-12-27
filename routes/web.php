@@ -18,4 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('baiku', 'baikuController@index');
+/*Route::get('baiku', 'baikuController@index');*/
+Route::resource('baiku', 'baikuController');
