@@ -17,12 +17,18 @@
     <script src="{{  asset('js/jquery.sub.js') }}"></script> 
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+   
 
     <!-- Styles -->
-    <link href="{{ asset('css/comm.css') }}" rel="stylesheet">
+    
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/media.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/subtest.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/card.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/col.css') }}" rel="stylesheet">
+    
+
+    <link href="{{ asset('css/dropdown.css') }}" rel="stylesheet">
     <link href="{{ asset('css/subtest.css') }}" rel="stylesheet">
     
 
@@ -31,7 +37,7 @@
     <!--@include('layouts.menu')-->
     <div id="app">
         
-        @include('layouts.navtest')
+        @include('layouts.nav')
         
 
         <main>
