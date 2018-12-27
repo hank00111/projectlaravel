@@ -504,6 +504,17 @@ pre code {
     margin-right: auto;
     margin-left: auto
 }
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
 .no-gutters {
     margin-right: 0;
     margin-left: 0
@@ -512,6 +523,14 @@ pre code {
 .no-gutters>.col,.no-gutters>[class*=col-] {
     padding-right: 0;
     padding-left: 0
+}
+
+.col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col-auto,.col-lg,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-auto,.col-md,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md-auto,.col-sm,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px
 }
 
 .col {
@@ -1110,12 +1129,6 @@ pre code {
         order: -1
     }
 
-<<<<<<< HEAD
-.form-text {
-    display: block;
-    margin-top: .25rem
-}
-=======
     .order-md-last {
         -webkit-box-ordinal-group: 14;
         -ms-flex-order: 13;
@@ -1127,7 +1140,6 @@ pre code {
         -ms-flex-order: 0;
         order: 0
     }
->>>>>>> parent of 76993be... media del
 
     .order-md-1 {
         -webkit-box-ordinal-group: 2;
@@ -2922,13 +2934,6 @@ a.btn.disabled,fieldset:disabled a.btn {
     border-color: #e3342f
 }
 
-<<<<<<< HEAD
-.nav-tabs {
-    border-bottom: 1px solid #dee2e6
-}
-
-
-=======
 .btn-outline-danger:not(:disabled):not(.disabled).active:focus,.btn-outline-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-outline-danger.dropdown-toggle:focus {
     -webkit-box-shadow: 0 0 0 .2rem rgba(227,52,47,.5);
     box-shadow: 0 0 0 .2rem rgba(227,52,47,.5)
@@ -2980,17 +2985,12 @@ a.btn.disabled,fieldset:disabled a.btn {
     background-color: #343a40;
     border-color: #343a40
 }
->>>>>>> parent of 76993be... media del
 
 .btn-outline-dark.focus,.btn-outline-dark:focus {
     -webkit-box-shadow: 0 0 0 .2rem rgba(52,58,64,.5);
     box-shadow: 0 0 0 .2rem rgba(52,58,64,.5)
 }
 
-<<<<<<< HEAD
-.tab-content>.tab-pane {
-    display: none
-=======
 .btn-outline-dark.disabled,.btn-outline-dark:disabled {
     color: #343a40;
     background-color: transparent
@@ -3016,7 +3016,6 @@ a.btn.disabled,fieldset:disabled a.btn {
 .btn-link:hover {
     color: #1d68a7;
     background-color: transparent
->>>>>>> parent of 76993be... media del
 }
 
 .btn-link.focus,.btn-link:focus,.btn-link:hover {
@@ -3024,9 +3023,6 @@ a.btn.disabled,fieldset:disabled a.btn {
     border-color: transparent
 }
 
-<<<<<<< HEAD
-.breadcrumb {
-=======
 .btn-link.focus,.btn-link:focus {
     -webkit-box-shadow: none;
     box-shadow: none
@@ -3478,7 +3474,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 }
 
 .input-group-append,.input-group-prepend {
->>>>>>> parent of 76993be... media del
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
@@ -3708,10 +3703,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     background-color: #e9ecef
 }
 
-<<<<<<< HEAD
-.alert-heading {
-    color: inherit
-=======
 .custom-select::-ms-expand {
     opacity: 0
 }
@@ -3729,7 +3720,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .custom-select-lg {
     height: calc(2.6875rem + 2px);
     font-size: 125%
->>>>>>> parent of 76993be... media del
 }
 
 .custom-file {
@@ -3785,12 +3775,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
     color: #495057
 }
 
-<<<<<<< HEAD
-.alert-info {
-    color: #385d7a;
-    background-color: #e2f0fb;
-    border-color: #d6e9f9
-=======
 .custom-file-label:after {
     bottom: 0;
     z-index: 3;
@@ -3818,7 +3802,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .custom-range:focus::-webkit-slider-thumb {
     -webkit-box-shadow: 0 0 0 1px #f8fafc,0 0 0 .2rem rgba(52,144,220,.25);
     box-shadow: 0 0 0 1px #f8fafc,0 0 0 .2rem rgba(52,144,220,.25)
->>>>>>> parent of 76993be... media del
 }
 
 .custom-range:focus::-moz-range-thumb {
@@ -8691,18 +8674,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
         margin: .25rem!important
     }
 
-<<<<<<< HEAD
-.justify-content-end {
-    -webkit-box-pack: end!important;
-    -ms-flex-pack: end!important;
-    justify-content: flex-end!important
-}
-.justify-content-between {
-    -webkit-box-pack: justify!important;
-    -ms-flex-pack: justify!important;
-    justify-content: space-between!important
-}
-=======
     .mt-lg-1,.my-lg-1 {
         margin-top: .25rem!important
     }
@@ -8714,7 +8685,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
     .mb-lg-1,.my-lg-1 {
         margin-bottom: .25rem!important
     }
->>>>>>> parent of 76993be... media del
 
     .ml-lg-1,.mx-lg-1 {
         margin-left: .25rem!important
@@ -9174,11 +9144,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
         padding-right: 3rem!important
     }
 
-<<<<<<< HEAD
-.mb-auto,.my-auto {
-    margin-bottom: auto!important
-}
-=======
     .pb-xl-5,.py-xl-5 {
         padding-bottom: 3rem!important
     }
@@ -9186,7 +9151,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
     .pl-xl-5,.px-xl-5 {
         padding-left: 3rem!important
     }
->>>>>>> parent of 76993be... media del
 
     .m-xl-auto {
         margin: auto!important
@@ -9235,8 +9199,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
     text-align: right!important
 }
 
-<<<<<<< HEAD
-=======
 .text-center {
     text-align: center!important
 }
@@ -9297,7 +9259,6 @@ a.bg-dark:focus,a.bg-dark:hover,button.bg-dark:focus,button.bg-dark:hover {
     }
 }
 
->>>>>>> parent of 76993be... media del
 .text-lowercase {
     text-transform: lowercase!important
 }
@@ -9426,8 +9387,6 @@ a.text-dark:focus,a.text-dark:hover {
     visibility: hidden!important
 }
 
-<<<<<<< HEAD
-=======
 @media print {
     *,:after,:before {
         text-shadow: none!important;
@@ -9540,4 +9499,3 @@ a.text-dark:focus,a.text-dark:hover {
 
 
 
->>>>>>> parent of 76993be... media del
