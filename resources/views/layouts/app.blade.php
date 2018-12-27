@@ -22,12 +22,10 @@
     <!-- Styles -->
     
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/media.css') }}" rel="stylesheet">
     <link href="{{ asset('css/subtest.css') }}" rel="stylesheet">
+
     <link href="{{ asset('css/card.css') }}" rel="stylesheet">
     <link href="{{ asset('css/col.css') }}" rel="stylesheet">
-    
-
     <link href="{{ asset('css/dropdown.css') }}" rel="stylesheet">
     <link href="{{ asset('css/subtest.css') }}" rel="stylesheet">
     
