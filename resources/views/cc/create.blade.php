@@ -2,16 +2,12 @@
 
 @section('content')
 <div style="padding:10px; font-size:17px; font-family: 微軟正黑體;">
-    <h1 style="padding-top: 20px;">{{ __('新增') }}</h1>
-    <a href="{{ route('baiku.index') }}" class="btn btn-outline-dark form-control" style="margin-bottom: 1rem;">回上一頁</a>
-{!! Form::open(['url'=>'baiku']) !!}
-    <div class="form-group">
-        {!! Form::label('id','編號') !!}
-        {!! Form::text('id',null,['class'=>'form-control']) !!}
-    </div>
+    <h1 style="padding-top: 20px;">{{ __('新增 排氣量') }}</h1>
+{!! Form::open(['url'=>'cc']) !!}
+
    <div class="form-group">
-       {!! Form::label('year','年份:') !!}
-       {!! Form::selectRange('year', 2019, 2000,2018,['class'=>'form-control']) !!}   
+       {!! Form::label('CCID','排氣量編號:') !!}
+       {!! Form::selectRange('CCID', 1, 10,2018,['class'=>'form-control']) !!}   
    </div>
    <div class="form-group">
         {!! Form::label('raberu_ID','廠牌ID:') !!}
@@ -42,13 +38,14 @@
         {!! Form::text('HP',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-       {!! Form::label('CC','CC數') !!}
+       {!! Form::label('CC','') !!}
        {!! Form::text('CC',null,['class'=>'form-control']) !!}
    </div>
    <div class="form-group">
        {!! Form::submit('傳送',['class'=>'btn btn-success form-control']) !!}
    </div>
 {!! Form::close() !!}
+<a href="{{ route('cc.index') }}" class="btn btn-outline-dark form-control" style="margin-bottom: 1rem;">回上一頁</a>
 </div>
 
 
