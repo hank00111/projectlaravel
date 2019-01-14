@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests\MainRequest;
 use Carbon\Carbon;
 use App\Main;
-use App\User;
 use App\Raberu;
+use App\ccdate;
 use DB;
 use Yajra\Datatables\Datatables;
 
@@ -31,12 +31,16 @@ class DatatablesController extends Controller
      */
     public function anyData()
     {   
+        $test1= Raberu::all();
+        $cc= ccdate::all();
         $users = DB::table('mains')            
         //->select('raberu_ID','year','model','HP','CC')
-        ->join('raberus', 'mains.raberu_ID', '=', 'raberus.raberuID');
+        ->join('raberus', 'mains.raberu_ID', '=', 'raberus.raberuID')
+        ->join('ccdates', 'mains.CC_ID', '=', 'ccdates.CCID');
         return Datatables::of($users)           
         ->addColumn('action', function ($users) {
             return '<a href="datatables/'.$users->id.'/edit" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i> Edit</a>';
+
 
         })
         ->editColumn('id', '{{$id}}')

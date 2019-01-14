@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Main;
 use App\User;
 use App\Raberu;
+use App\ccdate;
 use DB;
 
 class BaikuController extends Controller
@@ -22,11 +23,12 @@ class BaikuController extends Controller
         //
         //$test = main::all();
         $test2= raberu::all();
+        $cc= ccdate::all();
         //$baiku= main::all();
         $test = DB::table('mains')            
         //->select('raberu_ID','year','model','HP','CC')
         ->join('raberus', 'mains.raberu_ID', '=', 'raberus.raberuID')
-        
+        ->join('ccdates', 'mains.CC_ID', '=', 'ccdates.CCID')
         ->paginate(5);
         /*$users = DB::table('mains')
             ->join('contacts', 'users.id', '=', 'contacts.user_id')
@@ -39,7 +41,7 @@ class BaikuController extends Controller
         //->orderBy('created_at', 'updated_at')
         //->take(10)
         //->get();
-        return view('baiku.index', compact('test','test2'));
+        return view('baiku.index', compact('test','test2','cc'));
 
     }
 
@@ -77,7 +79,7 @@ class BaikuController extends Controller
             'year' => $request->year,
             'model'  => $request->model,
             'HP' => $request->HP,
-            'CC' => $request->CC,
+            'CC_ID' => $request->CC_ID,
         ]);        
         return redirect()->route('baiku.index');
     }

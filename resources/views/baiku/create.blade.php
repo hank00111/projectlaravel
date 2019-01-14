@@ -42,8 +42,8 @@
         {!! Form::text('HP',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-       {!! Form::label('CC','CC數') !!}
-       {!! Form::text('CC',null,['class'=>'form-control']) !!}
+       {!! Form::label('CC_ID','排氣量') !!}
+       {!! Form::text('CC_ID',null,['class'=>'form-control']) !!}
    </div>
    <div class="form-group">
        {!! Form::submit('傳送',['class'=>'btn btn-success form-control']) !!}

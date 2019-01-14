@@ -45,6 +45,11 @@ class CCtypeController extends Controller
     public function store(Request $request)
     {
         //
+        ccdate::create([
+            'CCID' => $request->CCID,
+            'CCType'=> $request->CCType,
+        ]);        
+        return redirect()->route('cc.index');
     }
 
     /**
@@ -56,6 +61,11 @@ class CCtypeController extends Controller
     public function show($id)
     {
         //
+
+        //return view('numbers.index')->with('numbers', $item->numbers);
+        $cc = ccdate::where('CCID')->CCType();
+
+        return view('baiku.show', compact('cc'));
     }
 
     /**
@@ -67,6 +77,14 @@ class CCtypeController extends Controller
     public function edit($id)
     {
         //
+        $cc = ccdate::find($id);
+
+        //$items = \App\Item::all('uid','type')->toArray();
+        $selections = [];
+       /* foreach ($items as $option)
+            $selections[$option['uid']] = $option['type'];*/
+
+        return view('cc.edit')->with(['selections'=>$selections, 'ccdate'=>$cc]);
     }
 
     /**
@@ -79,6 +97,13 @@ class CCtypeController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $cc = ccdate::findOrFail($id);
+
+        $cc->update($request->all());
+
+        $cc = ccdate::all();
+        //return view('baiku.index')->with('numbers', $test);
+        return redirect()->route('cc.index');
     }
 
     /**
