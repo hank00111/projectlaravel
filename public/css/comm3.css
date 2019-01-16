@@ -11,16 +11,11 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
 @-ms-viewport {
     width: device-width
-}
-
-li{
-    list-style: none
 }
 
 article,
@@ -38,7 +33,7 @@ section {
 
 body {
     margin: 0;
-    font-family: Nunito, sans-serif,微軟正黑體;
+    font-family: Nunito, sans-serif;
     font-size: .9rem;
     font-weight: 400;
     line-height: 1.6;
@@ -1092,12 +1087,12 @@ pre code {
         max-width: 58.3333333333%
     }
 
-    /*.col-md-8 {
+    .col-md-8 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 66.66666667%;
         flex: 0 0 66.66666667%;
         max-width: 66.66666667%
-    }*/
+    }
 
     .col-md-9 {
         flex: 0 0 75%;
@@ -1932,7 +1927,7 @@ select.form-control:focus::-ms-value {
     padding-top: calc(.375rem + 1px);
     padding-bottom: calc(.375rem + 1px);
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: inherit;
     line-height: 1.6
 }
 
@@ -1992,8 +1987,7 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: 1rem;
-    
+    margin-bottom: 1rem
 }
 
 .form-text {
@@ -3252,7 +3246,7 @@ input[type=submit].btn-block {
     padding: .25rem 1.5rem;
     clear: both;
     font-weight: 400;
-    color: #000;
+    color: #212529;
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
@@ -3261,16 +3255,16 @@ input[type=submit].btn-block {
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    color: #fff;
+    color: #16181b;
     text-decoration: none;
-    background-color: #545b62;
+    background-color: #f8f9fa
 }
 
 .dropdown-item.active,
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #545b62
+    background-color: #3490dc
 }
 
 .dropdown-item.disabled,
@@ -3710,7 +3704,7 @@ input[type=submit].btn-block {
 
 .custom-select {
     display: inline-block;
-    width: 50%;
+    width: 100%;
     height: calc(2.19rem + 2px);
     padding: .375rem 1.75rem .375rem .75rem;
     line-height: 1.6;
@@ -4032,7 +4026,7 @@ input[type=submit].btn-block {
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-    color: #818182;
+    color: #495057;
     background-color: #f8fafc;
     border-color: #dee2e6 #dee2e6 #f8fafc
 }
@@ -4407,18 +4401,18 @@ input[type=submit].btn-block {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(94, 82, 82, 0.2)
+    color: rgba(0, 0, 0, 0.3)
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
-    color: rgba(94, 82, 82, 0.2)
+    color: rgba(0, 0, 0, .3)
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: rgba(94, 82, 82, 0.2)
+    color: rgba(0, 0, 0, .4)
 }
 
 .navbar-light .navbar-toggler {
@@ -9483,7 +9477,8 @@ a.text-dark:hover {
 .main_1{
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: rgb(230, 230, 230);
+    /*position: relative;*/
+    background-color: rgba(101,103,101,0.3);
     height: 980px;
     
     

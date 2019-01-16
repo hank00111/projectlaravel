@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\MainRequest;
-use Carbon\Carbon;
 use App\Main;
 use App\User;
 use App\Raberu;
@@ -53,7 +51,7 @@ class BaikuController extends Controller
     public function create()
     {
         //
-        return view('baiku.create');
+        return view('baiku/create');
     }
 
     /**
@@ -62,7 +60,7 @@ class BaikuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(MainRequest $request)
+    public function store(Request $request)
     {
         //
         /*$main          = new Main;
@@ -92,10 +90,7 @@ class BaikuController extends Controller
      */
     public function show($id)
     {
-        //$test3 = User::find($id);
-
-        $test = Main::find($id);
-        return view('baiku.index', compact('test'));
+        //
     }
 
     /**
@@ -107,14 +102,6 @@ class BaikuController extends Controller
     public function edit($id)
     {
         //
-        $test = main::find($id);
-
-        //$items = \App\Item::all('uid','type')->toArray();
-        $selections = [];
-       /* foreach ($items as $option)
-            $selections[$option['uid']] = $option['type'];*/
-
-        return view('baiku.edit')->with(['selections'=>$selections, 'main'=>$test]);
     }
 
     /**
@@ -124,16 +111,9 @@ class BaikuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(MainRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //
-        $test = main::findOrFail($id);
-
-        $test->update($request->all());
-
-        $test = main::all();
-        //return view('baiku.index')->with('numbers', $test);
-        return redirect()->route('baiku.index');
     }
 
     /**
@@ -145,14 +125,5 @@ class BaikuController extends Controller
     public function destroy($id)
     {
         //
-        $test = main::find($id);
-        //return redirect()->route('baiku.index');
-        //DB::table('users')->where('votes', '<', 100)->delete();
-        if($test->delete())
-        {
-            return redirect()->route('baiku.index')->with('success', '刪除成功-'.$id);
-        } else {
-            return redirect()->back()->with('error', '刪除失敗-'.$id);
-        }
     }
 }
