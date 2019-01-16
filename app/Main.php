@@ -9,7 +9,7 @@ class Main extends Model
 {
     //    
     protected $primaryKey = 'id';
-    protected $fillable = ['id','raberu_ID','year','model', 'HP','CC_ID',];
+    protected $fillable = ['id','raberu_ID','year','model', 'HP','CC',];
 
     /*public function raberu(){
 

@@ -77,20 +77,20 @@
 
 
 .baikuflush {
-	position: relative;
-	/*display: table;*/
+	position: absolute;
+	display: table;
 	font-style: normal;
 }
 .baikuflush a {
 	opacity: 0;
 	transition: opacity 0.5s linear;
-	
+	display: block;
 }
 .baikuflush:after {
 	content: '';
 	top: 0;
 	bottom: 0;
-	position: relative;
+	position: absolute;
 	background-color: #000;
 }
 .baikuflush.baikuflushRun:after { animation: flushHorizontal 0.6s cubic-bezier(0.02, 0.88, 0.58, 1); }

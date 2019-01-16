@@ -28,7 +28,7 @@
                                     <th>車型</th>
                                     <th>馬力</th>
                                     <th>排氣量</th>
-                                    <th></th>
+                                   
                                 </tr>
                             </thead>
                         </table>
@@ -49,14 +49,14 @@
     $('#users-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('get.baiku') }}",
+        ajax: 'http://localhost/projectlaravel/public/datatables/getdata',
         columns: [
             {data: 'id'},
-            {data: 'raberu_ID'},
+            {data: 'raberuType'},
             {data: 'year'},
             {data: 'model'},
             {data: 'HP'},
-            {data: 'CCID'},
+            {data: 'CC'},
             {data: 'action', name: 'action', orderable: false, searchable: false}
         ]
     });   
