@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\MainRequest;
-use Carbon\Carbon;
 use App\Main;
 use App\User;
-use App\Raberu;
-use DB;
 
 class BaikuController extends Controller
 {
@@ -20,27 +16,8 @@ class BaikuController extends Controller
     public function index()
     {
         //
-        //$test = main::all();
-        $test2= raberu::all();
-        //$baiku= main::all();
-        $test = DB::table('mains')            
-        //->select('raberu_ID','year','model','HP','CC')
-        ->join('raberus', 'mains.raberu_ID', '=', 'raberus.raberuID')
-        
-        ->paginate(5);
-        /*$users = DB::table('mains')
-            ->join('contacts', 'users.id', '=', 'contacts.user_id')
-            ->join('orders', 'users.id', '=', 'orders.user_id')
-            ->select('users.*', 'contacts.phone', 'orders.price')
-            ->get();
-        */
-
-        //$test = main::where('created_at',)
-        //->orderBy('created_at', 'updated_at')
-        //->take(10)
-        //->get();
-        return view('baiku.index', compact('test','test2'));
-
+        $test = main::all();
+        return view('home1',compact('test'));
     }
 
     /**
@@ -51,7 +28,7 @@ class BaikuController extends Controller
     public function create()
     {
         //
-        return view('baiku.create');
+        return view('baiku/create');
     }
 
     /**
@@ -60,26 +37,9 @@ class BaikuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(MainRequest $request)
+    public function store(Request $request)
     {
         //
-        /*$main          = new Main;
-        $main->raberu_ID  = $request->raberu_ID;
-        $main->year   = $request->year;
-        $main->model = $request->model;
-        $main->HP  = $request->HP;
-        $main->CC  = $request->CC;
-        $main->save();*/
-
-        Main::create([
-            'id' => $request->id,
-            'raberu_ID'   => $request->raberu_ID,
-            'year' => $request->year,
-            'model'  => $request->model,
-            'HP' => $request->HP,
-            'CC' => $request->CC,
-        ]);        
-        return redirect()->route('baiku.index');
     }
 
     /**
@@ -90,10 +50,7 @@ class BaikuController extends Controller
      */
     public function show($id)
     {
-        //$test3 = User::find($id);
-
-        $test = Main::find($id);
-        return view('baiku.index', compact('test'));
+        //
     }
 
     /**
@@ -105,14 +62,6 @@ class BaikuController extends Controller
     public function edit($id)
     {
         //
-        $test = main::find($id);
-
-        //$items = \App\Item::all('uid','type')->toArray();
-        $selections = [];
-       /* foreach ($items as $option)
-            $selections[$option['uid']] = $option['type'];*/
-
-        return view('baiku.edit')->with(['selections'=>$selections, 'main'=>$test]);
     }
 
     /**
@@ -122,16 +71,9 @@ class BaikuController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(MainRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //
-        $test = main::findOrFail($id);
-
-        $test->update($request->all());
-
-        $test = main::all();
-        //return view('baiku.index')->with('numbers', $test);
-        return redirect()->route('baiku.index');
     }
 
     /**
@@ -143,14 +85,5 @@ class BaikuController extends Controller
     public function destroy($id)
     {
         //
-        $test = main::find($id);
-        //return redirect()->route('baiku.index');
-        //DB::table('users')->where('votes', '<', 100)->delete();
-        if($test->delete())
-        {
-            return redirect()->route('baiku.index')->with('success', '刪除成功-'.$id);
-        } else {
-            return redirect()->back()->with('error', '刪除失敗-'.$id);
-        }
     }
 }
